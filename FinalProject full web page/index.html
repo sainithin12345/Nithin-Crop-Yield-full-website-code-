@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield and Plant Disease Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo">Crop Yield and Plant Disease Prediction</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="#" class="nav_link">Home</a>
+                    <a href="#" class="nav_link" id="cropLink">Crop Yield</a>
+                    <a href="#" class="nav_link" id="diseaseLink">Plant Disease</a>
+                </li>
+            </ul>
+            <button class="button" id="form-open">Login</button>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home">
+        <div class="form_container">
+            <i class="uil uil-times form_close"></i>
+            <!-- Login From -->
+            <div class="form login_form">
+                <form action="#">
+                    <h2>Login</h2>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your email" required />
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter your password" required />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" id="check" />
+                            <label for="check">Remember me</label>
+                        </span>
+                        <a href="#" class="forgot_pw">Forgot password?</a>
+                    </div>
+                    <button class="button">Login Now</button>
+                    <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                </form>
+            </div>
+            <!-- Signup From -->
+            <div class="form signup_form">
+                <form action="#">
+                    <h2>Signup</h2>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your email" required />
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Create password" required />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Confirm password" required />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <button class="button">Signup Now</button>
+                    <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crop Yield Prediction Form -->
+    <section id="cropFormSection" style="display:none;">
+        <div class="container">
+            <h1>Crop Yield Prediction</h1>
+            <form id="cropForm">
+                <label for="Crop_Year">Crop_Year</label>
+                <input type="number" id="Crop_Year" required>
+                <label for="Area">Area</label>
+                <input type="number" id="Area" required>
+                <label for="Temperature">Temperature</label>
+                <input type="number" id="Temperature" required>
+                <label for="Precipitation">Precipitation</label>
+                <input type="number" id="Precipitation" required>
+                <label for="Humidity">Humidity</label>
+                <input type="number" id="Humidity" required>
+                <label for="Crop">Crop</label>
+                <input type="text" id="Crop" required>
+                <label for="Soil_type">Soil_type</label>
+                <input type="number" id="Soil_type" required>
+                <!-- Predict button with .button class -->
+                <input type="submit" value="Predict" class="button">
+            </form>
+        </div>
+    </section>
+
+    <!-- Plant Disease Prediction Form -->
+    <section id="plantDiseaseFormSection" style="display:none;">
+        <div class="image">
+            <div class="container">
+                <h1>Plant Disease prediction</h1>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" id="fileInput" name="fileInput" class="file-input">
+                    <label for="fileInput" class="file-label">Choose File</label>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
